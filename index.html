@@ -296,6 +296,15 @@
             right: 59%;
             border-radius: 8px;
         }
+        @media only screen and (max-width:400px){
+            #password_enter{
+                top: 37%;
+            }
+            .enter_heading{
+                position: relative;
+                right: 45%;
+            }
+        }
     </style>
     <title>Document</title>
 
@@ -309,7 +318,7 @@
             <img src="image.jpeg" id="image_profile" srcset="">
         </div>
 
-        <div id="password_enter"><h2> <pre>       Enter your password here:</pre></h2> <br><input type="password" placeholder="Enter Password" id="password"><br>
+        <div id="password_enter"><h2 class="enter_heading"> <pre>       Enter your password here:</pre></h2> <br><input type="password" placeholder="Enter Password" id="password"><br>
             <button
                 id="enter">Confirm</button>
         </div>
