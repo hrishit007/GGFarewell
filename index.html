@@ -1,13 +1,320 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <div id="password_enter">Enter your password here:<input type="password" id="password"><br><button id="enter">Confirm</button></div>
     <script src="./temp.js"></script>
 </body>
+
+</html> -->
+
+
+
+
+
+<!--<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <style>
+        body {
+            /* font-family: Arial, Helvetica, sans-serif; */
+            /* font-family: 'Allura', cursive; */
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        .get_invite {
+            height: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .get_invite_but {
+            font-size: 50px;
+            font-size: 30px;
+            font-family: 'Allura';
+            border-radius: 10px;
+        }
+
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: rgb(2, 0, 36);
+            background: linear-gradient(36deg, rgba(2, 0, 36, 1) 0%, rgba(25, 121, 9, 1) 21%, rgba(0, 190, 255, 1) 88%);
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+            position: relative;
+        }
+
+        img.avatar {
+            width: 10%;
+            border-radius: 50%;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+
+        .wrong_pass {
+            display: none;
+            color: rgb(198, 7, 7);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto;
+            border: 1px solid #888;
+            border-radius: 10px;
+            width: 80%;
+        }
+
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 0;
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: red;
+            cursor: pointer;
+        }
+
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+
+        @-webkit-keyframes animatezoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes animatezoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="get_invite">
+
+        <button class="get_invite_but" onclick="document.getElementById('id01').style.display='block' "
+            style="width:auto;">Get_invite</button>
+    </div>
+
+    <div id="id01" class="modal">
+
+        <form class="modal-content animate" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+                <img src="./image.jpeg" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+
+
+                <label for="psw"><b>Enter your Password (Character_name)</b></label>
+                <input id="pass_entry" type="password" placeholder="Enter Password" name="psw" required>
+                <div class="wrong_pass"> The entered password doesn't matches with your character.</div>
+
+                <button type="submit" id="login">Login</button>
+                <label>
+
+            </div>
+
+
+        </form>
+    </div>
+
+    <script>
+        var modal = document.getElementById('id01');
+
+        // window.onclick = function(event) {
+        //     if (event.target == modal) {
+        //         modal.style.display = "none";
+        //     }
+        // }
+        //var logbutton = document.getElementById("login");
+        //logbutton.addEventListener('click', pass_check);
+        //function pass_check() {
+            // document.location.href="./main.html";
+            // console.log('work');
+            // // var pass=document.getElementById('pass_entry').value;
+            // var pass=document.querySelector('pass_entry').value;
+            // console.log(pass);
+            // const passw="aa";
+            // if(pass.localeCompare(passw)==0){
+            //     console.log("work correct");
+            //     document.location.href="./main.html";
+
+            // }
+            // else{
+            //     console.log('wrong');
+            //     document.getElementById('wrong_pass').display='block';
+            // }
+            const pass = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n'];
+            var okbutton = document.getElementById('login');
+
+
+            okbutton.addEventListener('click', passw);
+            function passw() {
+                var flag = false;
+                console.log("Hello");
+                var str = document.getElementById('pass_entry').value;
+                for (var i = 0; i < 14; i++) {
+                    if (str == pass[i]) {
+                        flag = true;
+                        break;
+                    }
+                }
+                if (flag) {
+                    window.location.href = "./main.html";
+
+                }
+            }
+        // }
+    </script>
+
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #image_profile {
+            width: 10%;
+           position: absolute;
+           top: 30%;
+           left: 45%;
+        }
+        #password_enter{
+            position:absolute;
+            top: 55%;
+            left: 37%;
+            width: 71%;
+        }
+        #password{
+            width: 40%;
+            right: 48%;
+        }
+        #enter{
+            position: absolute;
+            top: 108%;
+            font-size: larger;
+            background: linear-gradient(36deg, rgba(2, 0, 36, 1) 0%, rgba(25, 121, 9, 1) 21%, rgba(0, 190, 255, 1) 88%);
+            width: 42%;
+            right: 59%;
+            border-radius: 8px;
+        }
+    </style>
+    <title>Document</title>
+
+
+</head>
+
+<body>
+
+    <div class="main">
+        <div>
+            <img src="image.jpeg" id="image_profile" srcset="">
+        </div>
+
+        <div id="password_enter"><h2> <pre>       Enter your password here:</pre></h2> <br><input type="password" placeholder="Enter Password" id="password"><br>
+            <button
+                id="enter">Confirm</button>
+        </div>
+    </div>
+    <script src="./temp.js"></script>
+</body>
+
 </html>

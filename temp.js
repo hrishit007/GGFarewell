@@ -1,4 +1,4 @@
-const pass=['a','b','c','d','e','f','g','h','i','j','k','l','m','n']
+const pass=['alberteinstein','dara','marilynmonroe','waldo','tintin','mrindia','taehyun','v','bugsbunny','teletubby','po','sabu','shuttlecock','hela','dumbledore','albusdumbledore']
 var okbutton=document.getElementById('enter');
 
 
@@ -8,7 +8,7 @@ function passw(){
     console.log("Hello");
     var str=document.getElementById('password').value;
     const data={str};
-    for(var i=0;i<14;i++) {
+    for(var i=0;i<pass.length;i++) {
         if(str== pass[i]){
             flag=true;
             break;
